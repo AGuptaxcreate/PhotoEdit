@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Editor</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Photo Editor</h1>
+
+    <input type="file" id="upload" accept="image/*" class="file-input"/>
+
+    <div class="editor">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="controls">
+      <label>Brightness 
+        <input type="range" id="brightness" min="0" max="200" value="100">
+      </label>
+
+      <label>Contrast 
+        <input type="range" id="contrast" min="0" max="200" value="100">
+      </label>
+
+      <label>Saturation 
+        <input type="range" id="saturation" min="0" max="200" value="100">
+      </label>
+
+      <div class="btn-group">
+        <button onclick="rotate()">🔄 Rotate</button>
+        <button onclick="flip()">↔️ Flip</button>
+        <button onclick="downloadImage()">💾 Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
